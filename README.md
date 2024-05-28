@@ -15,6 +15,20 @@ Source: Google BigQuery
 
 Key Attributes: customer id, transaction id, Purchase date, transaction revenue, customer demographics, item quantity, item price, cost of goods sold (COGS). 
 
+# Tech Used
+
+•	BigQuery (database)
+
+•	SQL
+
+•	Power BI
+
+•	Google Sheets
+
+•	Python
+
+
+
 
 # Process and Methodology
 ## Data Cleaning
