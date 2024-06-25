@@ -9,7 +9,7 @@ Through data analysis, two potential solutions were proposed to optimize the loy
 
 
 # Data Description
-Dataset Size: Over 500 million rows of data pipelines
+Dataset Size: Over 2 billion rows of data pipelines
 
 Source: Google BigQuery
 
