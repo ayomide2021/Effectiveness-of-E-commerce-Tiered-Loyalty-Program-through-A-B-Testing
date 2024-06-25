@@ -1,7 +1,7 @@
 # Effectiveness-of-E-commerce-Tiered-Loyalty-Program-through-A-B-Testing
 
 # Overview
-In this project, I analyzed a large e-commerce dataset to uncover valuable insights into the effectiveness of a tiered loyalty program, focusing on the impact of coupons and discounts on customer retention, revenue, and profitability. Utilizing SQL, Google Sheets, and Power BI, I processed and visualized over 500 million rows of data stored in Google BigQuery.
+In this project, I analyzed a large e-commerce dataset to uncover valuable insights into the effectiveness of a tiered loyalty program, focusing on the impact of coupons and discounts on customer retention, revenue, and profitability. Utilizing SQL, Google Sheets, and Power BI, I processed and visualized over 2 billion rows of data stored in Google BigQuery.
 
 A/B test analysis was conducted to evaluate the impact of the loyalty program on customer retention and company profitability.
 
