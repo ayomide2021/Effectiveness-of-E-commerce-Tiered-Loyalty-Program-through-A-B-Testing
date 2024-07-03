@@ -44,6 +44,15 @@ Key Attributes: customer id, transaction id, Purchase date, transaction revenue,
 •	Created interactive dashboards in Power BI to visualize key metrics and trends.
 
 
+# Results and Insights
+## Key Findings and Insights
+•	The use of coupons by company loyalty program customers skyrocketed after the launch of the Loyalty program. 
+
+•	The loyalty program performs better in some metrics but worse off in others. For instance, while the revenue and average order frequency are increasing, the average basket value and profit margin are decreasing. 
+
+•	The loyalty program improved retention through repeat purchases by the loyalty program customers. 
+
+
 ![Kazeem Odunlami_project-1](https://github.com/ayomide2021/Effectiveness-of-E-commerce-Tiered-Loyalty-Program-through-A-B-Testing/assets/83126882/31851c3a-ee92-4643-b0f6-4e6e53445271)
 
 ![Kazeem Odunlami_project-2](https://github.com/ayomide2021/Effectiveness-of-E-commerce-Tiered-Loyalty-Program-through-A-B-Testing/assets/83126882/4d699f5b-4eec-4bcc-9158-5f471948b3af)
@@ -54,18 +63,16 @@ Key Attributes: customer id, transaction id, Purchase date, transaction revenue,
 
 
 
-# Results and Insights
-## Key Findings and Insights
-•	The use of coupons by company tier plus customers skyrocketed after the launch of the Loyalty program. 
-
-•	The loyalty program performs better in some metrics but worse off in others. For instance, while the revenue and average order frequency are increasing, the average basket value and profit margin are decreasing. 
-
-•	The loyalty program improved retention through repeat purchases by tier plus customers. 
-
 # Recommendations and Impacts
-•	Option1: Discontinue the loyalty program. Over £22K can be from saved excessive discounts to tier  plus  customers.
+Solution 1: Discontinue the Loyalty Program
+o	Impact: By discontinuing the loyalty program, the company can save over £22K in costs associated with excessive discounts given to the loyalty program members
+o	Rationale: This solution eliminates the direct financial impact of the discounts, thus improving overall profitability. However, it risks losing the repeat purchases driven by the loyalty program.
+Solution 2: Adjust and Continue the Loyalty Program
+o	Adjust Discount Rates: Modify the discount rates for each loyalty tier group to optimize profitability while maintaining customer engagement.
+o	Gradual Phase-Out of High-Discount Coupons: Gradually phase out high-discount coupons (40% OFF and 50% OFF) to reduce the financial impact.
+o	Offer Non-Discount Benefits: Introduce non-discount benefits for loyalty members to retain customer loyalty without heavily relying on financial discounts.
+o	Impact: This adjustment could potentially save over £12K while preserving customer loyalty and maintaining a balanced approach to incentives.
 
-•	Option 2: Adjust the discount rate for each  tier group + Gradual Phase-Out of High Discount Coupon (40%OFF 50%OFF). Offer tier plus members early access to product launches and sales. Through this adjustment, the company can potentially save over £12k while maintaining customer loyalty.
 
 # Conclusion
 
