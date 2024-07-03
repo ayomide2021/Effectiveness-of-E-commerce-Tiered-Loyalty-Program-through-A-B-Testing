@@ -4,13 +4,13 @@
 
 The analysis of the impact of discounts on customer behavior reveals that while these incentives drive revenue through repeat purchases, they also significantly affect profitability. Based on the findings, I recommend two potential solutions for moving forward:
 
-1.	Solution 1: Discontinue the Loyalty Program
+Solution 1: Discontinue the Loyalty Program
    
 o	Impact: By discontinuing the loyalty program, the company can save over £22K in costs associated with excessive discounts given to the loyalty program members.
 
 o	Rationale: This solution eliminates the direct financial impact of the discounts, thus improving overall profitability. However, it risks losing the repeat purchases driven by the loyalty program.
 
-2	Solution 2: Adjust and Continue the Loyalty Program
+Solution 2: Adjust and Continue the Loyalty Program
 
 o	Adjust Discount Rates: Modify the discount rates for each loyalty tier group to optimize profitability while maintaining customer engagement.
 
@@ -43,7 +43,7 @@ Using A/B testing, the company aims to answer the following questions:
 •	Are there significant differences in engagement metrics (e.g., repeat purchases, time spent on the website, interaction with marketing campaigns)?
 
 
-Objective:
+# Objective:
 
 The primary objective is to understand and improve customer retention by identifying the impact of discounts on customer behavior.
 By the end of this project, the company expects to have a clear understanding of:
