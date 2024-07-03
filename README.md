@@ -65,12 +65,19 @@ Key Attributes: customer id, transaction id, Purchase date, transaction revenue,
 
 # Recommendations and Impacts
 Solution 1: Discontinue the Loyalty Program
-o	Impact: By discontinuing the loyalty program, the company can save over £22K in costs associated with excessive discounts given to the loyalty program members
+
+o	Impact: By discontinuing the loyalty program, the company can save over £22K in costs associated with excessive discounts given to the loyalty program members.
+
 o	Rationale: This solution eliminates the direct financial impact of the discounts, thus improving overall profitability. However, it risks losing the repeat purchases driven by the loyalty program.
+
 Solution 2: Adjust and Continue the Loyalty Program
+
 o	Adjust Discount Rates: Modify the discount rates for each loyalty tier group to optimize profitability while maintaining customer engagement.
+
 o	Gradual Phase-Out of High-Discount Coupons: Gradually phase out high-discount coupons (40% OFF and 50% OFF) to reduce the financial impact.
+
 o	Offer Non-Discount Benefits: Introduce non-discount benefits for loyalty members to retain customer loyalty without heavily relying on financial discounts.
+
 o	Impact: This adjustment could potentially save over £12K while preserving customer loyalty and maintaining a balanced approach to incentives.
 
 
