@@ -1,4 +1,4 @@
--- Calculating cumulative revenue and profit for test and control group
+/*Calculating cumulative revenue and profit for test and control group*/
 
 WITH filtered_transactions AS (
    
