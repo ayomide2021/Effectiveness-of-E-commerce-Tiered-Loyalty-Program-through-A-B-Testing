@@ -19,13 +19,13 @@ Key Attributes: customer id, transaction id, Purchase date, transaction revenue,
 
 •	BigQuery (database)
 
-•	SQL
+•	SQL: CTEs, joins, aggregate functions, window functions, case
 
-•	Power BI
+•	Power BI: Dax, Calculated columns, data visualization, data modeling
 
-•	Google Sheets
+•	Google Sheets:Formulas, pivot tables, version history, sharing and permissions
 
-•	Python
+•	Python: Pandas, Matplotlib, Numpy
 
 
 
