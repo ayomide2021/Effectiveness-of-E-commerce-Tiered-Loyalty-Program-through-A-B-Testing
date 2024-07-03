@@ -43,16 +43,15 @@ Key Attributes: customer id, transaction id, Purchase date, transaction revenue,
 
 •	Created interactive dashboards in Power BI to visualize key metrics and trends.
 
-![Week 10 Presentation_Kazeem Odunlami_page-0003](https://github.com/ayomide2021/Effectiveness-of-E-commerce-Tiered-Loyalty-Program-through-A-B-Testing/assets/83126882/497d3651-b1d4-4b71-ac2c-8afdfaaf4478)
 
-![Week 10 Presentation_Kazeem Odunlami_page-0004](https://github.com/ayomide2021/Effectiveness-of-E-commerce-Tiered-Loyalty-Program-through-A-B-Testing/assets/83126882/c591dbd3-9b65-4639-a444-9c23ae10789e)
+![Kazeem Odunlami_project-1](https://github.com/ayomide2021/Effectiveness-of-E-commerce-Tiered-Loyalty-Program-through-A-B-Testing/assets/83126882/31851c3a-ee92-4643-b0f6-4e6e53445271)
 
-![Presentation1_page-0001](https://github.com/ayomide2021/Effectiveness-of-E-commerce-Tiered-Loyalty-Program-through-A-B-Testing/assets/83126882/f3068d26-b092-435f-a1a5-f8938c8f9b27)
+![Kazeem Odunlami_project-2](https://github.com/ayomide2021/Effectiveness-of-E-commerce-Tiered-Loyalty-Program-through-A-B-Testing/assets/83126882/4d699f5b-4eec-4bcc-9158-5f471948b3af)
 
+![Kazeem Odunlami_project-3](https://github.com/ayomide2021/Effectiveness-of-E-commerce-Tiered-Loyalty-Program-through-A-B-Testing/assets/83126882/2904bace-26e6-4a1b-a7ed-944adb82e917)
 
-![Week 10 Presentation_Kazeem Odunlami_page-0005](https://github.com/ayomide2021/Effectiveness-of-E-commerce-Tiered-Loyalty-Program-through-A-B-Testing/assets/83126882/128acde4-c6ac-4b92-bf7b-ba7609daac32)
+![Kazeem Odunlami_project-4](https://github.com/ayomide2021/Effectiveness-of-E-commerce-Tiered-Loyalty-Program-through-A-B-Testing/assets/83126882/156d8ace-5634-4aa7-a98d-29860b06d752)
 
-![Week 10 Presentation_Kazeem Odunlami_page-0006](https://github.com/ayomide2021/Effectiveness-of-E-commerce-Tiered-Loyalty-Program-through-A-B-Testing/assets/83126882/a4fef9a9-cc10-40f0-ae49-8c3a90ba0d05)
 
 
 # Results and Insights
