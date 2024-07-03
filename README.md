@@ -1,11 +1,60 @@
 # Analysis of Effectiveness of E-commerce Tiered-Loyalty Program through A/B Testing
 
-# Overview
-In this project, I analyzed a large e-commerce dataset to uncover valuable insights into the effectiveness of a tiered loyalty program, focusing on the impact of coupons and discounts on customer retention, revenue, and profitability. Utilizing SQL, Google Sheets, and Power BI, I processed and visualized over 2 billion rows of data stored in Google BigQuery.
+# Executive Summary
 
-A/B test analysis was conducted to evaluate the impact of the loyalty program on customer retention and company profitability.
+The analysis of the impact of discounts on customer behavior reveals that while these incentives drive revenue through repeat purchases, they also significantly affect profitability. Based on the findings, I recommend two potential solutions for moving forward:
 
-Through data analysis, two potential solutions were proposed to optimize the loyalty program to ensure customer engagement while maximizing revenue and minimizing costs.
+1.	Solution 1: Discontinue the Loyalty Program
+   
+o	Impact: By discontinuing the loyalty program, the company can save over £22K in costs associated with excessive discounts given to the loyalty program members.
+
+o	Rationale: This solution eliminates the direct financial impact of the discounts, thus improving overall profitability. However, it risks losing the repeat purchases driven by the loyalty program.
+
+2	Solution 2: Adjust and Continue the Loyalty Program
+
+o	Adjust Discount Rates: Modify the discount rates for each loyalty tier group to optimize profitability while maintaining customer engagement.
+
+o	Gradual Phase-Out of High-Discount Coupons: Gradually phase out high-discount coupons (40% OFF and 50% OFF) to reduce the financial impact.
+
+o	Offer Non-Discount Benefits: Introduce non-discount benefits for loyalty members to retain customer loyalty without heavily relying on financial discounts.
+
+o	Impact: This adjustment could potentially save over £12K while preserving customer loyalty and maintaining a balanced approach to incentives.
+
+By implementing either of these solutions, the company can better manage the trade-off between driving revenue through repeat purchases and maintaining profitability. The recommended adjustments aim to find a middle ground that sustains customer engagement without compromising the company's financial health.
+
+
+# Business Problem:
+
+Customer retention has been an issue for a fictional e-commerce company for the past two years. Stakeholders and management have observed that most customers purchase once and do not return. Given that retaining existing customers is more cost-effective than acquiring new ones, the company has decided to implement a pilot project offering benefits in the form of discounts to certain customers. The aim is to analyze customer behaviors through A/B testing to determine the effectiveness of these discounts on customer retention.
+
+
+Using A/B testing, the company aims to answer the following questions:
+
+•	What characterizes the behavior of customers in the test group compared to the control group?
+
+•	What factors trigger purchases among these customers?
+
+•	How profitable are the customers in the test group compared to the control group?
+
+•	Do the discounts lead to increased overall spending or just reduced margins?
+
+•	How engaged are the customers in the test group compared to the control group?
+
+•	Are there significant differences in engagement metrics (e.g., repeat purchases, time spent on the website, interaction with marketing campaigns)?
+
+
+Objective:
+
+The primary objective is to understand and improve customer retention by identifying the impact of discounts on customer behavior.
+By the end of this project, the company expects to have a clear understanding of:
+
+•	The effectiveness of discounts in improving customer retention.
+
+•	Key behavioral triggers and characteristics of retained customers.
+
+•	The overall profitability of the discount strategy.
+
+•	Enhanced customer engagement resulting from the discounts. 
 
 
 # Data Description
@@ -36,6 +85,15 @@ Key Attributes: customer id, transaction id, Purchase date, transaction revenue,
 •	Handled null values.
 •	Ensured data consistency and accuracy.
 •	Removed irrelevant data from the analysis. 
+
+## methodology
+
+The pilot project involves dividing customers into two groups:
+
+•	Test Group: Customers who receive discounts.
+
+•	Control Group: Customers who do not receive discounts.
+
 
 
 ## Data Analysis and Visualization
@@ -84,6 +142,17 @@ o	Impact: This adjustment could potentially save over £12K while preserving cus
 # Conclusion
 
 This project demonstrated the significant impact of data-driven decisions on business performance. By leveraging advanced data analytics techniques, I provided actionable insights from A/B testing that led to improved customer retention and increased revenue while maintaining customer satisfaction and loyalty.
+
+# Next Steps:
+
+Based on the findings, the company will make informed decisions about:
+
+•	Scaling the discount strategy to a larger customer base.
+
+•	Implementing additional retention strategies.
+
+•	Optimizing marketing efforts to target high-value customers effectively.
+
 
 # Technical Details 
 ## Sample SQL query for analysis
