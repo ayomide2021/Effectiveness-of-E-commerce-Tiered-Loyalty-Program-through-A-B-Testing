@@ -139,10 +139,6 @@ o	Offer Non-Discount Benefits: Introduce non-discount benefits for loyalty membe
 o	Impact: This adjustment could potentially save over £12K while preserving customer loyalty and maintaining a balanced approach to incentives.
 
 
-# Conclusion
-
-This project demonstrated the significant impact of data-driven decisions on business performance. By leveraging advanced data analytics techniques, I provided actionable insights from A/B testing that led to improved customer retention and increased revenue while maintaining customer satisfaction and loyalty.
-
 # Next Steps:
 
 Based on the findings, the company will make informed decisions about:
