@@ -1,16 +1,18 @@
 
 --Unit economics before and after launch
+
 WITH users_cte AS (
 SELECT
       *,
-      ROW_NUMBER() OVER (PARTITION BY user_crm_id ORDER BY latest_login_date DESC) AS row_num
+      ROW_NUMBER() OVER (PARTITION BY user_crm_id ORDER BY latest_login_date DESC) AS row_num -- removing duplicates
     FROM
       warehouse.users),
+     
 -- Cleaned users data above
 all_opt_in_users AS (
   SELECT 
     t.user_crm_id,
-    prism_plus_tier, 
+    plus_tier, 
     COUNT(DISTINCT t.transaction_id) AS transaction_count, 
     SUM(t.transaction_revenue) AS transaction_revenue
   FROM (
@@ -20,9 +22,11 @@ all_opt_in_users AS (
   LEFT JOIN users_cte AS u
   USING(user_crm_id)
   WHERE opt_in_status = TRUE AND row_num = 1
-  GROUP BY user_crm_id, prism_plus_tier
+  GROUP BY user_crm_id, plus_tier
 ),
--- Finding potential prism_plus users above
+     
+-- Finding potential plus users above (loyalty program member -- test group)
+     
 pseudo_status_calc AS (
   SELECT 
     CASE 
@@ -32,19 +36,19 @@ pseudo_status_calc AS (
       WHEN transaction_count >= 4 THEN "pseudo_platinum"
     END AS plus_or_pseudo_status,
     user_crm_id,
-    prism_plus_tier
+    plus_tier
   FROM all_opt_in_users 
-  WHERE prism_plus_tier IS NULL
+  WHERE plus_tier IS NULL
   UNION ALL
   SELECT 
     CASE 
-      WHEN prism_plus_tier = 'Bronze' THEN 'Actual Bronze'
-      WHEN prism_plus_tier = 'Silver' THEN 'Actual Silver'
-      WHEN prism_plus_tier = 'Gold' THEN 'Actual Gold'
-      WHEN prism_plus_tier = 'Platinum' THEN 'Actual Platinum'
+      WHEN plus_tier = 'Bronze' THEN 'Actual Bronze'
+      WHEN plus_tier = 'Silver' THEN 'Actual Silver'
+      WHEN plus_tier = 'Gold' THEN 'Actual Gold'
+      WHEN plus_tier = 'Platinum' THEN 'Actual Platinum'
     END AS plus_or_pseudo_status,
     user_crm_id,
-    prism_plus_tier
+    plus_tier
   FROM all_opt_in_users 
   WHERE prism_plus_tier IS NOT NULL
 ),
