@@ -23,7 +23,7 @@ Key Attributes: customer id, transaction id, Purchase date, transaction revenue,
 
 •	Power BI: Dax, Calculated columns, data visualization, data modeling
 
-•	Google Sheets:Formulas, pivot tables, version history, sharing and permissions
+•	Google Sheets: Formulas, pivot tables, version history, sharing and permissions
 
 •	Python: Pandas, Matplotlib, Numpy
 
