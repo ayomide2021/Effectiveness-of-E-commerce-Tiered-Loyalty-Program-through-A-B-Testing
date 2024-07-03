@@ -86,7 +86,7 @@ Key Attributes: customer id, transaction id, Purchase date, transaction revenue,
 •	Ensured data consistency and accuracy.
 •	Removed irrelevant data from the analysis. 
 
-## methodology
+## Methodology
 
 The pilot project involves dividing customers into two groups:
 
