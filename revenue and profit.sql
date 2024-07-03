@@ -1,3 +1,5 @@
+-- Calculating cumulative revenue and profit for test and control group
+
 WITH filtered_transactions AS (
    
    -- Use now
@@ -5,7 +7,7 @@ WITH filtered_transactions AS (
     FROM (SELECT DISTINCT * FROM warehouse.transactions WHERE date >= '2022-01-01')
     WHERE user_crm_id IN (
         SELECT user_crm_id 
-        FROM `prism-insights.red_team_mc1.ASW_AB_info`
+        FROM `insights.red_team_mc1.ASW_AB_info`
         GROUP BY user_crm_id
     )
 ),
@@ -24,42 +26,42 @@ transaction_profits AS (
 transactions_final AS (
     SELECT 
         p.date, 
-        u.prism_group, 
-        u.prism_plus_tier, 
+        u.p_group, 
+        u.plus_tier, 
         p.item_cost, 
         COUNT(p.transaction_id) AS num_transactions, 
         COALESCE(ROUND(SUM(p.transaction_profit), 2), 0) AS transaction_profit,transaction_revenue,
         u.AB_tier
     FROM transaction_profits AS p
     LEFT JOIN (
-        SELECT user_crm_id, prism_plus_tier, prism_group, 
+        SELECT user_crm_id, plus_tier, p_group, 
             CASE 
-                WHEN prism_group = 'Test' AND prism_plus_tier = 'Bronze' THEN 'Actual Bronze'
-                WHEN prism_group = 'Test' AND prism_plus_tier = 'Silver' THEN 'Actual Silver'
-                WHEN prism_group = 'Test' AND prism_plus_tier = 'Gold' THEN 'Actual Gold'
-                WHEN prism_group = 'Test' AND prism_plus_tier = 'Platinum' THEN 'Actual Platinum'
-                WHEN prism_group = 'Control' AND prism_plus_tier = 'Bronze' THEN 'Pseudo Bronze'
-                WHEN prism_group = 'Control' AND prism_plus_tier = 'Silver' THEN 'Pseudo Silver'
-                WHEN prism_group = 'Control' AND prism_plus_tier = 'Gold' THEN 'Pseudo Gold'
-                WHEN prism_group = 'Control' AND prism_plus_tier = 'Platinum' THEN 'Pseudo Platinum'
+                WHEN p_group = 'Test' AND plus_tier = 'Bronze' THEN 'Actual Bronze'
+                WHEN p_group = 'Test' AND plus_tier = 'Silver' THEN 'Actual Silver'
+                WHEN p_group = 'Test' AND plus_tier = 'Gold' THEN 'Actual Gold'
+                WHEN p_group = 'Test' AND plus_tier = 'Platinum' THEN 'Actual Platinum'
+                WHEN p_group = 'Control' AND plus_tier = 'Bronze' THEN 'Pseudo Bronze'
+                WHEN p_group = 'Control' AND plus_tier = 'Silver' THEN 'Pseudo Silver'
+                WHEN p_group = 'Control' AND plus_tier = 'Gold' THEN 'Pseudo Gold'
+                WHEN p_group = 'Control' AND plus_tier = 'Platinum' THEN 'Pseudo Platinum'
             END AS AB_tier
-        FROM `prism-insights.red_team_mc1.ASW_AB_info`
-        GROUP BY user_crm_id, prism_plus_tier, prism_group
+        FROM `insights.red_team_mc1.ASW_AB_info`
+        GROUP BY user_crm_id, plus_tier, p_group
     ) AS u USING(user_crm_id)
-    GROUP BY p.date, u.prism_group, u.prism_plus_tier, p.item_cost, u.AB_tier, transaction_revenue
-    ORDER BY p.date, u.prism_group
+    GROUP BY p.date, u.p_group, u.plus_tier, p.item_cost, u.AB_tier, transaction_revenue
+    ORDER BY p.date, u.p_group
 )
 SELECT 
     date,
-    prism_group,
-    prism_plus_tier,
+    p_group,
+    pplus_tier,
     AB_tier,
     item_cost,
     num_transactions,
     transaction_profit,
     transaction_revenue,
     SUM(num_transactions) OVER (PARTITION BY AB_tier ORDER BY date) AS cumulative_transactions,
-    ROUND(SUM(transaction_profit) OVER (PARTITION BY AB_tier ORDER BY date), 2) AS cumulative_profit,
-     ROUND(SUM(transaction_revenue) OVER (PARTITION BY AB_tier ORDER BY date), 2) AS cumulative_revenue
+    ROUND(SUM(transaction_profit) OVER (PARTITION BY AB_tier ORDER BY date), 2) AS cumulative_profit, -- round to 2 decimal places
+     ROUND(SUM(transaction_revenue) OVER (PARTITION BY AB_tier ORDER BY date), 2) AS cumulative_revenue -- round to 2 decimal places
 FROM transactions_final
-ORDER BY date, prism_group;
+ORDER BY date, p_group;
