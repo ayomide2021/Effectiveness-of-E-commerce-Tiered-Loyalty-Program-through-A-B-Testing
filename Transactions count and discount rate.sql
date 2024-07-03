@@ -1,9 +1,9 @@
 -- This query selects users (based on historical data, prior to 2022-01-01) to identify test and Contro groups
--- In the first step step, all opt-in users are selected, irespective of their Prism Plus status
+-- In the first step step, all opt-in users are selected, irespective of their status (test or control group)
 WITH all_opt_in_users AS (
   SELECT
     DISTINCT t.user_crm_id,
-    u.prism_plus_tier
+    u.plus_tier
   FROM (SELECT DISTINCT * FROM `warehouse.transactions` WHERE date < '2022-01-01') AS t
   LEFT JOIN `warehouse.users` AS u
   USING(user_crm_id)
@@ -14,14 +14,14 @@ WITH all_opt_in_users AS (
 TestGroup As(
 SELECT *
 FROM all_opt_in_users
-WHERE prism_plus_tier IS NOT NULL
+WHERE plus_tier IS NOT NULL
 ),
 
 -- Transactional data for the Test group
 TestTransactions AS(
 SELECT
   t.user_crm_id,
-  u.prism_plus_tier,
+  u.plus_tier,
   u.city AS user_city,
   t.transaction_id,
   t.date AS transaction_date,
@@ -64,7 +64,7 @@ GROUP BY 1,2,3,4,5
 --2022-01-01 was when the PrismPlus program was implemented
 --To account for the discounts offered to tiered users, we select transactions where NO discount coupons are involved.
 SELECT
-  prism_plus_tier,
+  plus_tier,
   COUNT(transaction_id) AS transaction_count,
   ROUND(SUM(undiscounted_revenue),2) AS total_undiscounted_revenue,
   ROUND(SUM(transaction_revenue),2) AS total_transaction_revenue,
