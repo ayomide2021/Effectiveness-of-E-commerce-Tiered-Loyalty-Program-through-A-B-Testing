@@ -151,32 +151,31 @@ Based on the findings, the company will make informed decisions about:
 
 
 # Technical Details 
-## Sample SQL query for analysis
+## Sample SQL query for analysis. Codes are in the other folders
 --- users_count for each group
 
--- Change date for post launched count
 
 #### --CTE to divide group into Test and control group
 
 WITH new_data AS 
 
-(SELECT  *,-- user_crm_id, prism_plus_tier, prism_group, 
+(SELECT  *,-- user_crm_id, plus_tier, p_group, 
 
-CASE WHEN prism_group  = 'Test'  AND prism_plus_tier = 'Bronze' THEN 'Actual Bronze'
+CASE WHEN p_group  = 'Test'  AND plus_tier = 'Bronze' THEN 'Actual Bronze'
 
-WHEN prism_group  = 'Test'  AND prism_plus_tier = 'Silver' THEN 'Actual Silver'
+WHEN p_group  = 'Test'  AND plus_tier = 'Silver' THEN 'Actual Silver'
 
-WHEN prism_group  = 'Test'  AND prism_plus_tier = 'Gold' THEN 'Actual Gold'
+WHEN p_group  = 'Test'  AND plus_tier = 'Gold' THEN 'Actual Gold'
 
-WHEN prism_group  = 'Test'  AND prism_plus_tier = 'Platinum' THEN 'Actual Platinum'
+WHEN p_group  = 'Test'  AND plus_tier = 'Platinum' THEN 'Actual Platinum'
 
-WHEN prism_group  = 'Control'  AND prism_plus_tier = 'Bronze' THEN 'Psuedo Bronze'
+WHEN p_group  = 'Control'  AND plus_tier = 'Bronze' THEN 'Psuedo Bronze'
 
-WHEN prism_group  = 'Control'  AND prism_plus_tier = 'Silver' THEN 'Pseudo Bronze'
+WHEN p_group  = 'Control'  AND plus_tier = 'Silver' THEN 'Pseudo Bronze'
 
-WHEN prism_group  = 'Control'  AND prism_plus_tier = 'Gold' THEN 'Pseudo Gold'
+WHEN p_group  = 'Control'  AND plus_tier = 'Gold' THEN 'Pseudo Gold'
 
-WHEN prism_group  = 'Control'  AND prism_plus_tier = 'Platinum' THEN 'Pseudo Platinum'
+WHEN p_group  = 'Control'  AND plus_tier = 'Platinum' THEN 'Pseudo Platinum'
 
 END AS AB_tier
 
